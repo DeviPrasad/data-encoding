@@ -22,8 +22,6 @@ release:
 	RUSTFLAGS=${PLEB_RUST_FLAGS} cargo build --release
 
 clean:
-	cd lib; make clean
 	cargo clean --quiet --release --offline
 	cargo clean --quiet --target debug
-	cd lib; rm -rf log/*
 	rm -rf log/*
